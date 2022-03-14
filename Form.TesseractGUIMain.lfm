@@ -1,0 +1,67 @@
+object FormTesseractGUIMain: TFormTesseractGUIMain
+  Left = 309
+  Height = 535
+  Top = 170
+  Width = 900
+  Caption = 'FormTesseractGUIMain'
+  ClientHeight = 535
+  ClientWidth = 900
+  OnCreate = FormCreate
+  Position = poScreenCenter
+  LCLVersion = '2.2.0.4'
+  object MemoResult: TMemo
+    Left = 0
+    Height = 485
+    Top = 50
+    Width = 900
+    Align = alClient
+    TabOrder = 0
+  end
+  object PanelTop: TPanel
+    Left = 0
+    Height = 50
+    Top = 0
+    Width = 900
+    Align = alTop
+    ClientHeight = 50
+    ClientWidth = 900
+    TabOrder = 1
+    object ButtonClipboardToText: TButton
+      Left = 20
+      Height = 25
+      Top = 12
+      Width = 139
+      Caption = 'Clipboard To Text'
+      OnClick = ButtonClipboardToTextClick
+      TabOrder = 0
+    end
+    object ButtonImageToText: TButton
+      Left = 180
+      Height = 25
+      Top = 12
+      Width = 139
+      Caption = 'Image To Text'
+      OnClick = ButtonImageToTextClick
+      TabOrder = 1
+    end
+    object LabeledEditLanguageOption: TLabeledEdit
+      Left = 464
+      Height = 22
+      Top = 15
+      Width = 220
+      EditLabel.Height = 16
+      EditLabel.Width = 104
+      EditLabel.Caption = 'Language Option'
+      LabelPosition = lpLeft
+      TabOrder = 2
+      Text = 'kor+eng'
+      TextHint = 'Input Language Option'
+    end
+  end
+  object OpenDialogImage: TOpenDialog
+    Title = 'Open existing image file'
+    Filter = 'Image Files|*.jpg;*.jpeg;*.png;*.bmp'
+    Left = 692
+    Top = 96
+  end
+end
