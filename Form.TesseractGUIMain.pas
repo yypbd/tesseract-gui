@@ -90,6 +90,16 @@ begin
 
   {$IFDEF Darwin}
   ExePath := '/opt/homebrew/bin/tesseract';
+
+  if not FileExists(ExePath) then
+  begin
+    ExePath := '/usr/local/bin/tesseract';
+
+    if not FileExists(ExePath) then
+    begin
+      ExePath := '';
+    end;
+  end;
   {$ENDIF}
 
   {$IFDEF Windows}
@@ -97,6 +107,12 @@ begin
 
   {$IFDEF LINUX}
   {$ENDIF}
+
+  if ExePath = '' then
+  begin
+    ShowMessage('Install tesseract-ocr first...');
+    Exit;
+  end;
 
   Result := '';
   if Trim(LabeledEditLanguageOption.Text) = '' then

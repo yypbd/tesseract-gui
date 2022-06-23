@@ -8,7 +8,7 @@ object FormTesseractGUIMain: TFormTesseractGUIMain
   ClientWidth = 900
   OnCreate = FormCreate
   Position = poScreenCenter
-  LCLVersion = '2.2.0.4'
+  LCLVersion = '2.2.2.0'
   object MemoResult: TMemo
     Left = 0
     Height = 485
@@ -52,6 +52,7 @@ object FormTesseractGUIMain: TFormTesseractGUIMain
       EditLabel.Height = 16
       EditLabel.Width = 104
       EditLabel.Caption = 'Language Option'
+      EditLabel.ParentColor = False
       LabelPosition = lpLeft
       TabOrder = 2
       Text = 'kor+eng'
