@@ -8,7 +8,7 @@ Simple tesseract gui tool.
 
 #### macOS
 
-```
+```bash
 brew install imagemagick
 brew install tesseract
 brew install tesseract-lang
@@ -16,10 +16,7 @@ brew install tesseract-lang
 
 ### build and run TesseractGUI
 
-
 ## Usage
-
-TODO: Write usage instructions
 
 ## Contributing
 
@@ -31,13 +28,8 @@ TODO: Write usage instructions
 
 ## History
 
-TODO: Write history
-
 ## Credits
-
-TODO: Write credits
 
 ## License
 
-TODO: Write license
-
+see LICENSE
